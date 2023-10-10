@@ -18,4 +18,5 @@ public class Game {
     public void setPlayers(List<Player> players) {
         this.players = players;
     }
+    
 }

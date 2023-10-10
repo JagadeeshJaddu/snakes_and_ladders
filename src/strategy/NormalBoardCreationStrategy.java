@@ -22,7 +22,10 @@ public class NormalBoardCreationStrategy implements BoardCreationStrategy {
         System.out.println("Enter the size of board:");
         int boardSize = scanner.nextInt();
         board.setBoardSize(boardSize);
-        for (int i = 0; i < (boardSize * boardSize); i++) {
+        Cell cell1 = new Cell();
+        cell1.setCellNumber(0);
+        boardCells.add(cell1);
+        for (int i = 1; i <=(boardSize * boardSize); i++) {
             System.out.println("Is " + (i + 1) + "th cell normal or object:(Normal - N / Object - O)");
             String ans = scanner.nextLine();
             if (ans.equalsIgnoreCase("N")) {
@@ -46,7 +49,7 @@ public class NormalBoardCreationStrategy implements BoardCreationStrategy {
                 boardCells.add(cell);
             }
         }
-
+        scanner.close();
         board.setBoardCells(boardCells);
         
         return board;
