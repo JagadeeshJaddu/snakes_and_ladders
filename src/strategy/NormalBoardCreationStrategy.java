@@ -26,7 +26,7 @@ public class NormalBoardCreationStrategy implements BoardCreationStrategy {
         cell1.setCellNumber(0);
         boardCells.add(cell1);
         for (int i = 1; i <=(boardSize * boardSize); i++) {
-            System.out.println("Is " + (i + 1) + "th cell normal or object:(Normal - N / Object - O)");
+            System.out.println("Is " + (i) + "th cell normal or object:(Normal - N / Object - O)");
             String ans = scanner.nextLine();
             if (ans.equalsIgnoreCase("N")) {
                 Cell cell = new Cell();
